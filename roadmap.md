@@ -1,47 +1,70 @@
 ```mermaid
-flowchart LR
-    A[Stage 1: Foundations]:::stage1 --> A1[Programming: Java, Python, Scala]
-    A --> A2[SQL, Basic NoSQL]
-    A --> A3[Hadoop: HDFS, YARN]
-    A --> A4[Git, CI/CD Basics]
-    A --> A5[Azure Basics, ADLS Intro]
-    A --> A6[Docker Basics]
-    A --> A7[Security Basics: HTTPS, OAuth, JWT]
+graph TD
+    %% Main Flow
+    A[Stage 1: Foundations] --> B[Stage 2: Core Data Engineering Skills]
+    B --> C[Stage 3: Big Data & Distributed Systems]
+    C --> D[Stage 4: Cloud & Deployment]
+    D --> E[Stage 5: Advanced Topics & Specialization]
 
-    B[Stage 2: Intermediate]:::stage2 --> B1[Apache Spark, PySpark]
-    B --> B2[Spark Streaming Basics]
-    B --> B3[HBase Basics (CRUD, Model)]
-    B --> B4[Airflow, Oozie, ADF]
-    B --> B5[Kafka Basics, Connect]
-    B --> B6[Data Modeling (Star/Snowflake)]
-    B --> B7[Azure HDInsight]
-    B --> B8[Kubernetes Basics, Helm]
-    B --> B9[Spring Boot Basics, Microservices]
-    B --> B10[OAuth/JWT in Spring Boot]
+    %% Stage 1 Details
+    subgraph S1[Stage 1: Foundations]
+        A1[Programming Languages]
+        A2[SQL]
+        A3[Big Data Fundamentals]
+        A4[Version Control & CI/CD Basics]
+        A1 -->|Java| A1a[Core + OOP + Concurrency]
+        A1 -->|Python| A1b[Pandas, NumPy]
+        A2 -->|Joins| A2a
+        A2 -->|Aggregations| A2b
+        A2 -->|Window Functions| A2c
+        A3 -->|HDFS, YARN| A3a
+        A4 -->|Git, Jenkins Basics| A4a
+    end
 
-    C[Stage 3: Advanced]:::stage3 --> C1[Spark Optimization, AQE, Skew Handling]
-    C --> C2[HBase Advanced (Compactions, Kerberos)]
-    C --> C3[Kafka Advanced (Exactly-once, Flink)]
-    C --> C4[Azure Databricks, Synapse, Event Hubs]
-    C --> C5[Delta Lake, Hudi, Iceberg]
-    C --> C6[Azure Purview, Key Vault, RBAC]
-    C --> C7[Cosmos DB, Advanced SQL]
-    C --> C8[Grafana, Prometheus, ELK, OpenTelemetry]
-    C --> C9[Spring WebFlux, API Gateway]
-    C --> C10[Data Quality (Great Expectations, Deequ)]
+    %% Stage 2 Details
+    subgraph S2[Stage 2: Core Data Engineering Skills]
+        B1[Data Modeling & ETL]
+        B2[APIs & Integration]
+        B3[Testing Strategies]
+        B1 -->|Star Schema| B1a
+        B1 -->|ETL Tools| B1b[Airflow Basics]
+        B2 -->|REST APIs| B2a
+        B3 -->|TDD & BDD| B3a
+    end
 
-    D[Stage 4: Expert]:::stage4 --> D1[Data Mesh, Data Fabric, Lakehouse]
-    D --> D2[CI/CD for Data, GitOps (ArgoCD)]
-    D --> D3[Performance & Cost Optimization]
-    D --> D4[Event-driven Architectures]
-    D --> D5[Enterprise Security, Zero Trust]
-    D --> D6[GDPR, HIPAA Compliance]
-    D --> D7[Observability at Scale]
-    D --> D8[ML Feature Stores (Feast, Tecton)]
+    %% Stage 3 Details
+    subgraph S3[Stage 3: Big Data & Distributed Systems]
+        C1[Apache Spark]
+        C2[Streaming & Messaging]
+        C3[Data Formats]
+        C1 -->|Spark Core| C1a
+        C1 -->|Spark SQL| C1b
+        C1 -->|Spark Streaming| C1c
+        C2 -->|Kafka| C2a
+        C2 -->|Flink (optional)| C2b
+        C3 -->|Parquet, Avro, ORC| C3a
+    end
 
-    classDef stage1 fill:#add8e6,stroke:#333,stroke-width:2px;
-    classDef stage2 fill:#90ee90,stroke:#333,stroke-width:2px;
-    classDef stage3 fill:#ffa500,stroke:#333,stroke-width:2px;
-    classDef stage4 fill:#ffb6c1,stroke:#333,stroke-width:2px;
+    %% Stage 4 Details
+    subgraph S4[Stage 4: Cloud & Deployment]
+        D1[Cloud Platforms]
+        D2[Containerization & Orchestration]
+        D3[CI/CD & Monitoring]
+        D1 -->|AWS, Azure, GCP| D1a
+        D2 -->|Docker| D2a
+        D2 -->|Kubernetes| D2b
+        D3 -->|Jenkins| D3a
+        D3 -->|Grafana & Prometheus| D3b
+    end
 
+    %% Stage 5 Details
+    subgraph S5[Stage 5: Advanced Topics & Specialization]
+        E1[Data Lake & Data Warehouse]
+        E2[Performance & Scalability]
+        E3[Security & Governance]
+        E1 -->|Snowflake, BigQuery| E1a
+        E2 -->|Partitioning| E2a
+        E2 -->|Indexing| E2b
+        E3 -->|OAuth, Kerberos| E3a
+    end
 ```
