@@ -10,7 +10,7 @@ flowchart LR
 
     B[Stage 2: Intermediate]:::stage2 --> B1[Apache Spark, PySpark]
     B --> B2[Spark Streaming Basics]
-    B --> B3[HBase Basics (CRUD, Model)]
+    B --> B3[HBase Basics - CRUD, Model]
     B --> B4[Airflow, Oozie, ADF]
     B --> B5[Kafka Basics, Connect]
     B --> B6[Data Modeling (Star/Snowflake)]
@@ -20,15 +20,15 @@ flowchart LR
     B --> B10[OAuth/JWT in Spring Boot]
 
     C[Stage 3: Advanced]:::stage3 --> C1[Spark Optimization, AQE, Skew Handling]
-    C --> C2[HBase Advanced (Compactions, Kerberos)]
-    C --> C3[Kafka Advanced (Exactly-once, Flink)]
+    C --> C2[HBase Advanced - Compactions, Kerberos]
+    C --> C3[Kafka Advanced Exactly-once, Flink]
     C --> C4[Azure Databricks, Synapse, Event Hubs]
     C --> C5[Delta Lake, Hudi, Iceberg]
     C --> C6[Azure Purview, Key Vault, RBAC]
     C --> C7[Cosmos DB, Advanced SQL]
     C --> C8[Grafana, Prometheus, ELK, OpenTelemetry]
     C --> C9[Spring WebFlux, API Gateway]
-    C --> C10[Data Quality (Great Expectations, Deequ)]
+    C --> C10[Data Quality - Great Expectations, Deequ]
 
     D[Stage 4: Expert]:::stage4 --> D1[Data Mesh, Data Fabric, Lakehouse]
     D --> D2[CI/CD for Data, GitOps (ArgoCD)]
